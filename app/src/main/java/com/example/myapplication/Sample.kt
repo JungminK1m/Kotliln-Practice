@@ -12,6 +12,47 @@ fun main() {
 
     println("this is 2\$")
 
+    chkNum(1)
+
+}
+
+// 조건식
+fun maxBy(a: Int, b: Int) : Int{
+
+    if (a>b){
+        return a
+    }else{
+        return b
+    }
+
+
+}
+
+// 같지만 다른 표현식 - 삼항 연산자 없기 때문에 이런 식으로 표현
+fun maxBy2(a: Int, b : Int) : Int = if(a>b) a else b
+
+fun chkNum(score : Int){
+    when(score) { // switch 역할
+        0-> println("this is 0")
+        1-> println("this is 1")
+        2,3-> println("this is 2 or 3")
+        else -> println("I don't know") // else 안써도 됨
+    }
+
+    // 아래의 경우에는 else 경우를 꼭 써야함
+    var b = when(score){
+        1->1
+        2->2
+        else ->3
+    }
+
+    println("b : ${b}")
+
+    when(score){
+        in 99..100 -> println("You are genius")
+        in 10..80 -> println("Not bad")
+        else-> println("Okay")
+    }
 }
 
 fun testFunction() {
