@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import androidx.compose.ui.text.toUpperCase
+
 fun main() {
 //    testFunction();
 //    println(add(4,5));
@@ -119,5 +121,23 @@ fun forAndWhile(){
     while (index<10){
         println("current index : ${index}")
         index++
+    }
+}
+
+// Nullable / NonNull
+
+fun nullcheck(){
+
+    var name = "min"
+    var nullName : String? = null
+}
+
+fun ignoreNulls(str : String?){
+    val mNotNull : String  = str!!
+    val upper = mNotNull.toUpperCase() // ?
+
+    val email = "deliah07@naver.com"
+    email?.let{
+
     }
 }
