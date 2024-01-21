@@ -1,19 +1,19 @@
 package com.example.myapplication
 
 fun main() {
-    testFunction();
-    println(add(4,5));
-
-    // String Template
-
-    val name = "Jungmin"
-    val lastName = "Kim"
-    println("my name is ${name + lastName}")
-
-    println("this is 2\$")
-
-    chkNum(1)
-
+//    testFunction();
+//    println(add(4,5));
+//
+//    // String Template
+//
+//    val name = "Jungmin"
+//    val lastName = "Kim"
+//    println("my name is ${name + lastName}")
+//
+//    println("this is 2\$")
+//
+//    chkNum(1)
+forAndWhile()
 }
 
 // 조건식
@@ -77,4 +77,47 @@ fun hi(){
     // 값을 할당하지 않을거라면 타입 선언해야 함.
 
     
+}
+
+// Array and List
+
+// Array : 기본적으로 지정되어 있는 사이즈가 있음
+// List : 1. List 2. MutabelList
+
+fun array() {
+    val array = arrayOf(1, 2, 3)  // arrayOf로 초기화
+    val list = listOf(1, 2, 3)    // lisrOf로 초기화
+
+    val array2 = arrayOf(1, "a", 3.4f)
+    val list2 = listOf(1, "a", 11L)
+
+    val arrayList = arrayListOf<Int>()
+    arrayList.add(10)
+    arrayList.add(20)
+}
+
+// for / while
+
+fun forAndWhile(){
+    val students : ArrayList<String> = arrayListOf("Joyce","James", "Jenny", "Jennifer")
+
+    for (name in students){
+        println("${name}")
+    }
+
+    for ((index, name) in students.withIndex()){
+        println("${index+1}번재 학생 : ${name}")
+    }
+
+    var sum : Int = 0
+    for (i in 1..10 step 2){
+        sum += i
+    }
+    println(sum)
+
+    var index = 0;
+    while (index<10){
+        println("current index : ${index}")
+        index++
+    }
 }
